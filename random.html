@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>random quiz</title>
+        <style>
+            #btn{
+                width: 100px;
+                height: 30px;
+                background-color: pink;  
+                text-align: center;
+                line-height: 2rem; 
+                cursor: pointer;             
+            }
+            .random-menu{
+                width: 100px;
+                height: 30px;
+                text-align: center;
+                line-height: 2rem;
+                background-color: palevioletred;
+            }
+        </style>
+        <script src="script/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function(){
+
+            $("#btn").click(function(){
+
+                var randomMenu = ["짜장면","칼국수","피자","볶음밥","쌀국수"];
+
+                var num = Math.floor(Math.random()*randomMenu.length);
+         
+                $(".random-menu").text(randomMenu[num]) ;
+
+                console.log($(".random-menu").text());
+
+            })
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="btn">
+            Click Me
+        </div>
+        <h3 class="random-menu"></h3>
+    </body>
+</html>
